@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/private/", "/admin/"],
       },
     ],
-    sitemap: "https://www.conteconstruccion.com/sitemap.xml",
-    host: "https://www.conteconstruccion.com",
+    sitemap: "https://www.conteconstruccion.com.ar/sitemap.xml",
+    host: "https://www.conteconstruccion.com.ar",
   }
 }
