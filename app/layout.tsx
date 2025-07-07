@@ -55,7 +55,7 @@ export const metadata: Metadata = {
         url: "/og-image-conte.jpg",
         width: 1200,
         height: 630,
-        alt: "CONTE CONSTRUCCIÓN - Construimos tu hogar ideal",
+        alt: "CONTE CONSTRUCCIÓN - Construimos Tu Hogar Ideal",
       },
     ],
   },
