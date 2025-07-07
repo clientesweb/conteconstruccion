@@ -93,7 +93,7 @@ export default function HeroSection() {
             isVideoLoaded ? "opacity-100" : "opacity-0",
           )}
         >
-          <source src="https://www.kuden.com.ar/video/conte-hero-final.mp4" type="video/mp4" />
+          <source src="/banner-principal.mp4" type="video/mp4" />
           <track kind="captions" srcLang="es" label="Español" />
           Tu navegador no soporta videos HTML5.
         </video>
