@@ -54,7 +54,7 @@ export default function Header() {
 
   const menuItems = [
     { name: "Nosotros", href: "/#nosotros" },
-    { name: "Viviendas", href: "/#tipologias" },
+    { name: "Viviendas", href: "/tipologias" },
     { name: "Blog", href: "/blog" },
     { name: "Contacto", href: "/#contacto" },
   ]
