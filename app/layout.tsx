@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://www.conteconstruccion.com"),
+  metadataBase: new URL("https://www.conteconstruccion.com.ar"),
   alternates: {
     canonical: "/",
   },
@@ -45,17 +45,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_AR",
-    url: "https://www.conteconstruccion.com",
+    url: "https://www.conteconstruccion.com.ar",
     title: "CONTE CONSTRUCCIÓN - Viviendas Sistema Tradicional Minimalista Moderno",
     description:
       "Especialistas en viviendas con Sistema Tradicional Minimalista Moderno, combinando eficiencia, durabilidad y diseño contemporáneo.",
     siteName: "CONTE CONSTRUCCIÓN",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image-conte.jpg",
         width: 1200,
         height: 630,
-        alt: "CONTE CONSTRUCCIÓN - Viviendas Sistema Tradicional Minimalista",
+        alt: "CONTE CONSTRUCCIÓN - Construimos tu hogar ideal",
       },
     ],
   },
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: "CONTE CONSTRUCCIÓN - Viviendas Sistema Tradicional Minimalista Moderno",
     description:
       "Especialistas en viviendas con Sistema Tradicional Minimalista Moderno, combinando eficiencia, durabilidad y diseño contemporáneo.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image-conte.jpg"],
     creator: "@conteconstruccion",
   },
   icons: {
@@ -82,7 +82,6 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   category: "construction",
-    generator: 'v0.dev'
 }
 
 // Configuración de viewport y theme-color
@@ -176,8 +175,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "CONTE CONSTRUCCIÓN",
-              url: "https://www.conteconstruccion.com",
-              logo: "https://www.conteconstruccion.com/favicon.png",
+              url: "https://www.conteconstruccion.com.ar",
+              logo: "https://www.conteconstruccion.com.ar/favicon.png",
               sameAs: ["https://instagram.com/conteconstruccion", "https://facebook.com/conteconstruccion"],
               contactPoint: {
                 "@type": "ContactPoint",
@@ -193,7 +192,7 @@ export default function RootLayout({
                 addressCountry: "AR",
               },
               description:
-                "Especialistas en viviendas con Sistema Tradicional Minimalista Moderno y Wood Frame con tecnología EIFS, combinando eficiencia, durabilidad y diseño contemporáneo.",
+                "Especialistas en viviendas con Sistema Tradicional Minimalista Moderno, combinando eficiencia, durabilidad y diseño contemporáneo.",
             }),
           }}
         />
