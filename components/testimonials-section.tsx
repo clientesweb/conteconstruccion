@@ -11,7 +11,7 @@ export default function TestimonialsSection() {
       initials: "MF",
       bgColor: "bg-blue-500",
       content:
-        "Elegir CONTE CONSTRUCCIÓN para nuestra casa fue la mejor decisión. El sistema Wood Frame con EIFS nos brindó un hogar eficiente energéticamente y con un diseño moderno. El equipo fue profesional desde el primer día hasta la entrega.",
+        "Elegir CONTE CONSTRUCCIÓN para nuestra casa fue la mejor decisión. Su sistema constructivo nos brindó un hogar eficiente energéticamente y con un diseño moderno. El equipo fue profesional desde el primer día hasta la entrega.",
       rating: 5,
     },
     {
@@ -20,7 +20,7 @@ export default function TestimonialsSection() {
       initials: "CR",
       bgColor: "bg-green-500",
       content:
-        "He trabajado con varias constructoras, pero CONTE CONSTRUCCIÓN destaca por su compromiso con la calidad y los plazos. La tecnología Wood Frame me ha permitido desarrollar proyectos más rápido y con excelentes resultados. Definitivamente seguiré confiando en ellos.",
+        "He trabajado con varias constructoras, pero CONTE CONSTRUCCIÓN destaca por su compromiso con la calidad y los plazos. Su metodología constructiva me ha permitido desarrollar proyectos más rápido y con excelentes resultados. Definitivamente seguiré confiando en ellos.",
       rating: 5,
     },
     {
@@ -29,7 +29,7 @@ export default function TestimonialsSection() {
       initials: "LM",
       bgColor: "bg-purple-500",
       content:
-        "Como profesional del sector, valoro enormemente la precisión técnica y la innovación que CONTE CONSTRUCCIÓN aporta a cada proyecto. Su sistema EIFS ofrece posibilidades de diseño excepcionales y un rendimiento térmico superior.",
+        "Como profesional del sector, valoro enormemente la precisión técnica y la innovación que CONTE CONSTRUCCIÓN aporta a cada proyecto. Su sistema constructivo ofrece posibilidades de diseño excepcionales y un rendimiento térmico superior.",
       rating: 5,
     },
     {
@@ -47,7 +47,7 @@ export default function TestimonialsSection() {
       initials: "AG",
       bgColor: "bg-pink-500",
       content:
-        "Como diseñadora, aprecio la flexibilidad que ofrece el sistema Wood Frame para adaptar los espacios. CONTE CONSTRUCCIÓN entendió perfectamente mis necesidades y el resultado final fue exactamente lo que había imaginado.",
+        "Como diseñadora, aprecio la flexibilidad que ofrece el sistema constructivo para adaptar los espacios. CONTE CONSTRUCCIÓN entendió perfectamente mis necesidades y el resultado final fue exactamente lo que había imaginado.",
       rating: 5,
     },
   ]
