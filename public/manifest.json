@@ -1,0 +1,43 @@
+{
+  "name": "CONTE CONSTRUCCIÓN",
+  "short_name": "CONTE",
+  "description": "Especialistas en viviendas Wood Frame con tecnología EIFS",
+  "start_url": "https://www.conteconstruccion.com/",
+  "scope": "https://www.conteconstruccion.com/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FF5000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contacto",
+      "short_name": "Contacto",
+      "description": "Contacta con CONTE CONSTRUCCIÓN",
+      "url": "https://www.conteconstruccion.com/#contacto"
+    },
+    {
+      "name": "Tipologías",
+      "short_name": "Tipologías",
+      "description": "Ver tipologías de viviendas",
+      "url": "https://www.conteconstruccion.com/tipologias"
+    }
+  ],
+  "lang": "es-AR",
+  "categories": ["construction", "business", "lifestyle"],
+  "screenshots": [],
+  "related_applications": []
+}
