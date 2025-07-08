@@ -86,7 +86,7 @@ export default function Footer() {
           <div>
             <h3 className="font-akony mb-6 text-lg font-bold text-gray-900">Servicios</h3>
             <ul className="space-y-4 text-gray-600">
-              {["Opciones Llave en Mano", "Financiación Total", "Personalización"].map((service) => (
+              {["Financiación Total", "Personalización", "Construcción Modular"].map((service) => (
                 <li key={service}>
                   <Link
                     href="#servicios"
