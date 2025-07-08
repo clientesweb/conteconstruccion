@@ -271,24 +271,12 @@ export default function TipologiaDetailPage({ params }: { params: { id: string }
                 <div>
                   <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 border border-orange-200">
                     <div className="text-center">
-                      <p className="font-adrianna text-sm text-gray-600 mb-2">Precio llave en mano</p>
                       <div className="font-akony text-5xl md:text-6xl font-bold text-orange-600 mb-4">
                         {tipologia.precio}
                       </div>
                       <p className="font-adrianna text-lg text-gray-600 mb-6">Incluye instalación completa</p>
                       <div className="space-y-3 text-left mb-6">
-                        <div className="flex items-center gap-3">
-                          <Check className="h-5 w-5 text-green-500" />
-                          <span className="font-adrianna text-gray-700">Llave en mano</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <Check className="h-5 w-5 text-green-500" />
-                          <span className="font-adrianna text-gray-700">Instalación incluida</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <Check className="h-5 w-5 text-green-500" />
-                          <span className="font-adrianna text-gray-700">Garantía de construcción</span>
-                        </div>
+                        {/* Sección eliminada según solicitud del cliente */}
                       </div>
                       <Button
                         className="font-adrianna w-full bg-orange-500 text-white hover:bg-orange-600 py-3 text-lg"
