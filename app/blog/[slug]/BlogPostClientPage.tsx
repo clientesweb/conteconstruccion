@@ -195,7 +195,7 @@ export default function BlogPostClientPage({ params }: { params: { slug: string 
                     <Button
                       variant="outline"
                       size="icon"
-                      className="h-8 w-8 rounded-full"
+                      className="h-8 w-8 rounded-full bg-transparent"
                       onClick={() => handleShare("facebook")}
                       aria-label="Compartir en Facebook"
                     >
@@ -204,7 +204,7 @@ export default function BlogPostClientPage({ params }: { params: { slug: string 
                     <Button
                       variant="outline"
                       size="icon"
-                      className="h-8 w-8 rounded-full"
+                      className="h-8 w-8 rounded-full bg-transparent"
                       onClick={() => handleShare("twitter")}
                       aria-label="Compartir en Twitter"
                     >
@@ -213,7 +213,7 @@ export default function BlogPostClientPage({ params }: { params: { slug: string 
                     <Button
                       variant="outline"
                       size="icon"
-                      className="h-8 w-8 rounded-full"
+                      className="h-8 w-8 rounded-full bg-transparent"
                       onClick={() => handleShare("whatsapp")}
                       aria-label="Compartir en WhatsApp"
                     >
@@ -222,7 +222,7 @@ export default function BlogPostClientPage({ params }: { params: { slug: string 
                     <Button
                       variant="outline"
                       size="icon"
-                      className="h-8 w-8 rounded-full"
+                      className="h-8 w-8 rounded-full bg-transparent"
                       onClick={() => handleShare("copy")}
                       aria-label="Copiar enlace"
                     >
@@ -302,8 +302,7 @@ export default function BlogPostClientPage({ params }: { params: { slug: string 
                   <div>
                     <h3 className="font-akony text-lg font-bold text-gray-900">{post.author}</h3>
                     <p className="font-adrianna text-gray-600">
-                      Especialistas en viviendas Wood Frame con tecnología EIFS, combinando eficiencia, durabilidad y
-                      diseño moderno.
+                      Especialistas en construcción moderna, combinando eficiencia, durabilidad y diseño contemporáneo.
                     </p>
                   </div>
                 </div>
@@ -354,7 +353,7 @@ export default function BlogPostClientPage({ params }: { params: { slug: string 
                       <Button
                         variant="outline"
                         size="sm"
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 bg-transparent"
                         onClick={() => handleShare("facebook")}
                       >
                         <i className="fa-brands fa-facebook-f text-sm"></i>
@@ -363,7 +362,7 @@ export default function BlogPostClientPage({ params }: { params: { slug: string 
                       <Button
                         variant="outline"
                         size="sm"
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 bg-transparent"
                         onClick={() => handleShare("twitter")}
                       >
                         <i className="fa-brands fa-x-twitter text-sm"></i>
@@ -372,7 +371,7 @@ export default function BlogPostClientPage({ params }: { params: { slug: string 
                       <Button
                         variant="outline"
                         size="sm"
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 bg-transparent"
                         onClick={() => handleShare("whatsapp")}
                       >
                         <i className="fa-brands fa-whatsapp text-sm"></i>
@@ -381,7 +380,7 @@ export default function BlogPostClientPage({ params }: { params: { slug: string 
                       <Button
                         variant="outline"
                         size="sm"
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 bg-transparent"
                         onClick={() => handleShare("copy")}
                       >
                         {isLinkCopied ? (
