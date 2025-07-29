@@ -4,9 +4,7 @@ import Image from "next/image"
 
 export default function OffersBannerSection() {
   return (
-    <section className="relative w-full overflow-hidden mt-8">
-      {" "}
-      {/* Added mt-8 here */}
+    <section className="relative w-full overflow-hidden">
       {/* Banner Container - Aspect ratio for 1920x720 is 8/3 */}
       <div className="relative w-full aspect-[8/3]">
         <Image
