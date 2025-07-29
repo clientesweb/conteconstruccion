@@ -1,15 +1,17 @@
 "use client"
 
 import { useRef, useState, useEffect } from "react"
-import Link from "next/link" // Import Link
+import Link from "next/link"
 import { Play, Pause, Volume2, VolumeX } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image" // Import Image component
 
 export default function VideoSection() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [isMuted, setIsMuted] = useState(true)
   const [isLoading, setIsLoading] = useState(true)
+  const [hasPlayed, setHasPlayed] = useState(false) // New state to track if video has been played
 
   useEffect(() => {
     const video = videoRef.current
@@ -27,6 +29,7 @@ export default function VideoSection() {
         video.pause()
       } else {
         video.play()
+        setHasPlayed(true) // Set hasPlayed to true when video starts playing
       }
       setIsPlaying(!isPlaying)
     }
@@ -44,7 +47,9 @@ export default function VideoSection() {
     <section id="video-section" className="py-12 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">¡Conoce la tipología Modena 1!</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
+            ¡Conoce<span className="text-orange-500">Modena 1</span>!
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Descubre los detalles de nuestra innovadora tipología Modena 1.
           </p>
@@ -58,9 +63,24 @@ export default function VideoSection() {
         </div>
 
         <div className="relative w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl aspect-video bg-gray-200 flex items-center justify-center">
-          {isLoading && (
+          {isLoading && !hasPlayed && (
             <div className="absolute inset-0 flex items-center justify-center bg-gray-200 z-10">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500"></div>
+            </div>
+          )}
+          {!isPlaying && !hasPlayed && (
+            <div className="absolute inset-0 z-20 flex items-center justify-center cursor-pointer" onClick={togglePlay}>
+              <Image
+                src="/images/vivienda-1-render.jpeg"
+                alt="Modena 1 House"
+                fill
+                style={{ objectFit: "cover" }}
+                className="absolute inset-0"
+                priority
+              />
+              <div className="relative z-30 bg-white/70 rounded-full p-4">
+                <Play className="h-16 w-16 text-orange-500" />
+              </div>
             </div>
           )}
           <video
@@ -69,31 +89,34 @@ export default function VideoSection() {
             loop
             playsInline
             preload="metadata"
-            className={`w-full h-full object-cover ${isLoading ? "hidden" : "block"}`}
+            className={`w-full h-full object-cover ${!hasPlayed || isLoading ? "hidden" : "block"}`}
             onPlay={() => setIsPlaying(true)}
             onPause={() => setIsPlaying(false)}
             onLoadedData={() => setIsLoading(false)}
             onError={() => console.error("Error loading video")}
+            poster="/images/vivienda-1-render.jpeg" // Set the poster image
           >
             Tu navegador no soporta el elemento de video.
           </video>
 
-          <div className="absolute bottom-4 right-4 flex space-x-2 z-20">
-            <Button
-              onClick={togglePlay}
-              className="bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-md"
-              aria-label={isPlaying ? "Pausar video" : "Reproducir video"}
-            >
-              {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
-            </Button>
-            <Button
-              onClick={toggleMute}
-              className="bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-md"
-              aria-label={isMuted ? "Activar sonido" : "Silenciar sonido"}
-            >
-              {isMuted ? <VolumeX className="h-6 w-6" /> : <Volume2 className="h-6 w-6" />}
-            </Button>
-          </div>
+          {hasPlayed && ( // Only show controls after video has been played once
+            <div className="absolute bottom-4 right-4 flex space-x-2 z-20">
+              <Button
+                onClick={togglePlay}
+                className="bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-md"
+                aria-label={isPlaying ? "Pausar video" : "Reproducir video"}
+              >
+                {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
+              </Button>
+              <Button
+                onClick={toggleMute}
+                className="bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-md"
+                aria-label={isMuted ? "Activar sonido" : "Silenciar sonido"}
+              >
+                {isMuted ? <VolumeX className="h-6 w-6" /> : <Volume2 className="h-6 w-6" />}
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </section>
