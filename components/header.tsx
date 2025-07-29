@@ -25,7 +25,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center" aria-label="Inicio">
           <Image
-            src="/images/conte-construccion-logo.png"
+            src="/images/logo.png"
             alt="Conte Construcción Logo"
             width={200} // Ajusta el ancho según sea necesario
             height={40} // Ajusta el alto según sea necesario
