@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     siteName: "CONTE CONSTRUCCIÓN",
     images: [
       {
-        url: "/og-image-conte.jpg",
+        url: "/og-image-conte-construccion.jpg",
         width: 1200,
         height: 630,
         alt: "CONTE CONSTRUCCIÓN - Construimos Tu Hogar Ideal",
