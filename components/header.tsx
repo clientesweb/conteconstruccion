@@ -58,7 +58,7 @@ export default function Header() {
             <div className="flex justify-between items-center mb-6">
               <Link href="/" className="flex items-center" onClick={() => setIsOpen(false)}>
                 <Image
-                  src="/images/conte-construccion-logo.png"
+                  src="/images/logo.png"
                   alt="Conte Construcción Logo"
                   width={150}
                   height={30}
