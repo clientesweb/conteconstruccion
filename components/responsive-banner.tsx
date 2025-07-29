@@ -1,47 +1,22 @@
+"use client"
+
 import Image from "next/image"
 
-export default function ResponsiveBanner() {
+export default function OffersBannerSection() {
   return (
-    <section className="w-full">
-      <div className="relative">
-        {/* Versión para móvil */}
-        <div className="relative block h-[180px] w-full md:hidden">
-          <Image
-            src="/images/banner-hogar-ideal.jpeg"
-            alt="CONTE CONSTRUCCIÓN - Construimos tu hogar ideal"
-            fill
-            sizes="100vw"
-            className="object-cover object-center"
-            loading="lazy"
-            fetchPriority="low"
-          />
-        </div>
-
-        {/* Versión para tablet */}
-        <div className="relative hidden h-[250px] w-full md:block lg:hidden">
-          <Image
-            src="/images/banner-hogar-ideal.jpeg"
-            alt="CONTE CONSTRUCCIÓN - Construimos tu hogar ideal"
-            fill
-            sizes="100vw"
-            className="object-cover object-center"
-            loading="lazy"
-            fetchPriority="low"
-          />
-        </div>
-
-        {/* Versión para desktop */}
-        <div className="relative hidden h-[300px] w-full lg:block">
-          <Image
-            src="/images/banner-hogar-ideal.jpeg"
-            alt="CONTE CONSTRUCCIÓN - Construimos tu hogar ideal"
-            fill
-            sizes="100vw"
-            className="object-cover object-center"
-            loading="lazy"
-            fetchPriority="low"
-          />
-        </div>
+    <section className="relative w-full overflow-hidden">
+      {/* Banner Container - Aspect ratio for 1920x720 is 8/3 */}
+      <div className="relative w-full aspect-[8/3]">
+        <Image
+          src="/images/banner-oferta-del-mes.webp"
+          alt="Ofertas del mes: Pagos contra entrega, financiación + entrega 25 días, ¡ventajas reales! Te bonificamos todo. Aprovechá nuestras promociones y tené tu vivienda en 25 días. Contamos con créditos financistas bancarios, recibimos vehículos, tarjetas de crédito."
+          fill
+          className="object-cover w-full h-full" // object-cover ensures the image covers the entire container
+          priority
+          sizes="100vw"
+          quality={100}
+        />
+        <h2 className="sr-only">Ofertas del Mes</h2>
       </div>
     </section>
   )
