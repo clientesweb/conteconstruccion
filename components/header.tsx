@@ -11,12 +11,12 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navLinks = [
-    { name: "Inicio", href: "/#inicio" },
-    { name: "Proyectos", href: "/#proyectos" },
+    { name: "INICIO", href: "/#inicio" },
+    { name: "TIPOLOGIAS", href: "/tipologias" },
     // { name: "Método Constructivo", href: "/metodo-constructivo" }, // Eliminado
-    { name: "Nosotros", href: "/#nosotros" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contacto", href: "/#contacto" },
+    { name: "NOSOTROS", href: "/#nosotros" },
+    { name: "BLOG", href: "/blog" },
+    { name: "CONTACTO", href: "/#contacto" },
   ]
 
   return (
