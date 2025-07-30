@@ -54,7 +54,7 @@ export default function VideoSection() {
             Descubre los detalles de nuestra innovadora tipología Modena 1.
           </p>
           <div className="mt-6">
-            <Link href="/tipologias-1" passHref>
+            <Link href="https://www.conteconstruccion.com.ar/tipologias/tipologia-1" passHref>
               <Button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
                 Ver Modena 1
               </Button>
