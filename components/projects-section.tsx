@@ -6,7 +6,7 @@ export default function ProjectsSection() {
   const tipologias = [
     {
       id: "tipologia-1",
-      title: "Vivienda Moderna 1",
+      title: "Vivienda Modena 1",
       description: "Vivienda ideal para parejas que inician su camino independiente",
       shortDescription: "Vivienda de 1 dormitorio, con cocina comedor, baño y ante baño. Ideal para parejas.",
       image: "/images/vivienda-1-render.jpeg",
@@ -19,7 +19,7 @@ export default function ProjectsSection() {
     },
     {
       id: "tipologia-2",
-      title: "Vivienda Moderna 2",
+      title: "Vivienda Modena 2",
       description: "Vivienda con 2 dormitorios y galería",
       shortDescription: "Vivienda con 2 dormitorios, baño, cocina, comedor y galería de 20m².",
       image: "/images/vivienda-2-main.png",
@@ -32,7 +32,7 @@ export default function ProjectsSection() {
     },
     {
       id: "tipologia-3",
-      title: "Vivienda Moderna 3",
+      title: "Vivienda Modena 3",
       description: "Vivienda con 2 dormitorios, baño, cocina, estar y comedor",
       shortDescription: "Amplia vivienda con espacios cómodamente distribuidos y galería de 16m².",
       image: "/images/vivienda-3-render.jpeg",
@@ -45,7 +45,7 @@ export default function ProjectsSection() {
     },
     {
       id: "tipologia-4",
-      title: "Vivienda Moderna 4",
+      title: "Vivienda Modena 4",
       description: "Vivienda con 2 dormitorios, baño, ante baño, lavadero, cocina, estar, comedor y galería",
       shortDescription: "Distribución completa con lavadero independiente y galería amplia de 20m².",
       image: "/images/vivienda-4-render.jpeg",
