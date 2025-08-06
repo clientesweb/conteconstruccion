@@ -104,7 +104,7 @@ export default function Footer() {
             <ul className="font-adrianna space-y-3 sm:space-y-4 text-gray-600">
               <li className="flex items-center gap-2 sm:gap-3">
                 <i className="fa-solid fa-phone-volume text-orange-500 text-sm"></i>
-                <span className="text-sm sm:text-base">(0351) 156669950</span>
+                <span className="text-sm sm:text-base">+54 9 3518 04-9096</span>
               </li>
               <li className="flex items-center gap-2 sm:gap-3">
                 <i className="fa-solid fa-envelope text-orange-500 text-sm"></i>
@@ -112,7 +112,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 sm:gap-3">
                 <i className="fa-brands fa-instagram text-orange-500 text-sm"></i>
-                <span className="text-sm sm:text-base">@conteconstruccion</span>
+                <span className="text-sm sm:text-base">@construccionconte</span>
               </li>
               <li className="flex items-start gap-2 sm:gap-3">
                 <i className="fa-solid fa-location-dot text-orange-500 text-sm mt-1"></i>
