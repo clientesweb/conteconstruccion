@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
@@ -9,6 +9,32 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [announcementVisible, setAnnouncementVisible] = useState(false)
+
+  useEffect(() => {
+    // Verificar si el anuncio está visible para ajustar la posición del header
+    const checkAnnouncement = () => {
+      const announcementClosed = localStorage.getItem("announcementClosed")
+      setAnnouncementVisible(!announcementClosed)
+    }
+
+    checkAnnouncement()
+
+    // Escuchar cambios en localStorage
+    const handleStorageChange = () => {
+      checkAnnouncement()
+    }
+
+    window.addEventListener("storage", handleStorageChange)
+
+    // También verificar periódicamente por si el anuncio se cierra en la misma pestaña
+    const interval = setInterval(checkAnnouncement, 1000)
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange)
+      clearInterval(interval)
+    }
+  }, [])
 
   const desktopNavLinks = [
     { name: "TIPOLOGIAS", href: "/tipologias" },
@@ -27,7 +53,11 @@ export default function Header() {
   ]
 
   return (
-    <header className="fixed top-10 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300">
+    <header
+      className={`fixed left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300 ${
+        announcementVisible ? "top-12 sm:top-14" : "top-0"
+      }`}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20">
         <div className="flex items-center justify-between h-full md:grid md:grid-cols-3 md:gap-4">
           {/* Navegación izquierda - Desktop */}

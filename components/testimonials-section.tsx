@@ -2,34 +2,48 @@
 
 import { useRef, useState, useEffect } from "react"
 import Link from "next/link"
-import { Play, Pause, Volume2, VolumeX } from "lucide-react"
+import { Play, Pause, Volume2, VolumeX, AlertCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Image from "next/image" // Import Image component
+import Image from "next/image"
 
 export default function VideoSection() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [isMuted, setIsMuted] = useState(true)
   const [isLoading, setIsLoading] = useState(true)
-  const [hasPlayed, setHasPlayed] = useState(false) // New state to track if video has been played
+  const [hasPlayed, setHasPlayed] = useState(false)
+  const [hasError, setHasError] = useState(false)
 
   useEffect(() => {
     const video = videoRef.current
     if (video) {
       const handleCanPlayThrough = () => setIsLoading(false)
+      const handleError = () => {
+        setIsLoading(false)
+        setHasError(true)
+        console.error("Error loading video: /banner-principal.mp4")
+      }
+
       video.addEventListener("canplaythrough", handleCanPlayThrough)
-      return () => video.removeEventListener("canplaythrough", handleCanPlayThrough)
+      video.addEventListener("error", handleError)
+
+      return () => {
+        video.removeEventListener("canplaythrough", handleCanPlayThrough)
+        video.removeEventListener("error", handleError)
+      }
     }
   }, [])
 
   const togglePlay = () => {
     const video = videoRef.current
-    if (video) {
+    if (video && !hasError) {
       if (isPlaying) {
         video.pause()
       } else {
-        video.play()
-        setHasPlayed(true) // Set hasPlayed to true when video starts playing
+        video.play().catch(() => {
+          setHasError(true)
+        })
+        setHasPlayed(true)
       }
       setIsPlaying(!isPlaying)
     }
@@ -63,12 +77,36 @@ export default function VideoSection() {
         </div>
 
         <div className="relative w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-xl aspect-video bg-gray-200 flex items-center justify-center">
-          {isLoading && !hasPlayed && (
+          {isLoading && !hasPlayed && !hasError && (
             <div className="absolute inset-0 flex items-center justify-center bg-gray-200 z-10">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500"></div>
             </div>
           )}
-          {!isPlaying && !hasPlayed && (
+
+          {hasError && (
+            <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-gray-100">
+              <Image
+                src="/images/vivienda-1-render.jpeg"
+                alt="Modena 1 House"
+                fill
+                style={{ objectFit: "cover" }}
+                className="absolute inset-0 opacity-50"
+                priority
+              />
+              <div className="relative z-30 bg-white/90 rounded-lg p-6 text-center max-w-md mx-4">
+                <AlertCircle className="h-12 w-12 text-orange-500 mx-auto mb-4" />
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Video no disponible</h3>
+                <p className="text-gray-600 mb-4">
+                  No se pudo cargar el video. Puedes ver más detalles de Modena 1 en nuestra página de tipologías.
+                </p>
+                <Link href="https://www.conteconstruccion.com.ar/tipologias/tipologia-1">
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-white">Ver Modena 1</Button>
+                </Link>
+              </div>
+            </div>
+          )}
+
+          {!isPlaying && !hasPlayed && !hasError && (
             <div className="absolute inset-0 z-20 flex items-center justify-center cursor-pointer" onClick={togglePlay}>
               <Image
                 src="/images/vivienda-1-render.jpeg"
@@ -83,23 +121,30 @@ export default function VideoSection() {
               </div>
             </div>
           )}
-          <video
-            ref={videoRef}
-            src="/banner-principal.mp4"
-            loop
-            playsInline
-            preload="metadata"
-            className={`w-full h-full object-cover ${!hasPlayed || isLoading ? "hidden" : "block"}`}
-            onPlay={() => setIsPlaying(true)}
-            onPause={() => setIsPlaying(false)}
-            onLoadedData={() => setIsLoading(false)}
-            onError={() => console.error("Error loading video")}
-            poster="/images/vivienda-1-render.jpeg" // Set the poster image
-          >
-            Tu navegador no soporta el elemento de video.
-          </video>
 
-          {hasPlayed && ( // Only show controls after video has been played once
+          {!hasError && (
+            <video
+              ref={videoRef}
+              src="/banner-principal.mp4"
+              loop
+              playsInline
+              preload="metadata"
+              className={`w-full h-full object-cover ${!hasPlayed || isLoading ? "hidden" : "block"}`}
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
+              onLoadedData={() => setIsLoading(false)}
+              onError={() => {
+                console.error("Error loading video: /banner-principal.mp4")
+                setHasError(true)
+                setIsLoading(false)
+              }}
+              poster="/images/vivienda-1-render.jpeg"
+            >
+              Tu navegador no soporta el elemento de video.
+            </video>
+          )}
+
+          {hasPlayed && !hasError && (
             <div className="absolute bottom-4 right-4 flex space-x-2 z-20">
               <Button
                 onClick={togglePlay}
