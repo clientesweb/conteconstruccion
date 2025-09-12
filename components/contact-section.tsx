@@ -403,10 +403,10 @@ ${data.message}
                   <div>
                     <p className="font-adrianna text-xs sm:text-sm text-gray-400">Teléfono</p>
                     <a
-                      href="tel:+5493516669950" // Actualizado enlace de teléfono al nuevo número
+                      href="tel:+5493516669950"
                       className="font-adrianna text-base sm:text-lg text-white hover:text-orange-300 transition-colors"
                     >
-                      (0351) 6669950 // Actualizado número mostrado al nuevo
+                      (0351) 6669950
                     </a>
                   </div>
                 </div>
