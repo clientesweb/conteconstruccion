@@ -3,6 +3,7 @@ import "./globals.css"
 import type { Metadata, Viewport } from "next"
 import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
+import HeaderAnnouncement from "@/components/header-announcement"
 
 // Metadatos para SEO
 export const metadata: Metadata = {
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://www.conteconstruccion.com.ar"),
+  metadataBase: new URL("https://conteconstruccion.com.ar"),
   alternates: {
     canonical: "/",
   },
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_AR",
-    url: "https://www.conteconstruccion.com.ar",
+    url: "https://conteconstruccion.com.ar",
     title: "CONTE CONSTRUCCIÓN - Viviendas Sistema Tradicional Minimalista Moderno",
     description:
       "Especialistas en viviendas con Sistema Tradicional Minimalista Moderno, combinando eficiencia, durabilidad y diseño contemporáneo.",
@@ -82,6 +83,7 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   category: "construction",
+    generator: 'v0.app'
 }
 
 // Configuración de viewport y theme-color
@@ -145,6 +147,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-white font-adrianna text-gray-900 antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          <HeaderAnnouncement />
           {children}
         </ThemeProvider>
 
@@ -175,8 +178,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "CONTE CONSTRUCCIÓN",
-              url: "https://www.conteconstruccion.com.ar",
-              logo: "https://www.conteconstruccion.com.ar/favicon.png",
+              url: "https://conteconstruccion.com.ar",
+              logo: "https://conteconstruccion.com.ar/favicon.png",
               sameAs: ["https://instagram.com/conteconstruccion", "https://facebook.com/conteconstruccion"],
               contactPoint: {
                 "@type": "ContactPoint",
@@ -187,6 +190,7 @@ export default function RootLayout({
               },
               address: {
                 "@type": "PostalAddress",
+                streetAddress: "Av. Monseñor P. Cabrera 3068 (B° Alto San Martín)",
                 addressLocality: "Córdoba",
                 addressRegion: "Córdoba",
                 addressCountry: "AR",

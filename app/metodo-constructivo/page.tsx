@@ -309,7 +309,7 @@ export default function MetodoConstructivoPage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <i className="fa-solid fa-phone mt-1 text-orange-500"></i>
-                    <span>Tel. (0351) 156669950</span>
+                    <span>Tel. (0351) 123456789</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <i className="fa-solid fa-user mt-1 text-orange-500"></i>
