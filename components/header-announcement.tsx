@@ -39,16 +39,14 @@ export default function HeaderAnnouncement() {
       <div className="container relative z-10 px-4 py-3 md:px-6 flex items-center justify-between">
         <div className="flex-1 text-center sm:text-left">
           <p className="font-adrianna text-sm sm:text-base">
-            <span className="font-akony font-bold mr-2">¡OFERTA ESPECIAL!</span>
-            <span className="hidden sm:inline">10% de descuento en todas nuestras tipologías hasta fin de mes.</span>
+            <span className="font-akony font-bold mr-2">CONOCE NUESTRO MÉTODO CONSTRUCTIVO</span>
+            <span className="hidden sm:inline">Descubre cómo construimos viviendas eficientes y duraderas.</span>
             <Link
-              href="/#tipologias"
+              href="/metodo-constructivo"
               className="underline ml-2 font-bold hover:text-white/90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-orange-500"
-              onClick={(e) => {
-                // Si estamos en la página principal, cerrar el anuncio al hacer clic
-                if (window.location.pathname === "/") {
-                  closeAnnouncement()
-                }
+              onClick={() => {
+                // Cerrar el anuncio al hacer clic en "Ver más"
+                closeAnnouncement()
               }}
             >
               Ver más

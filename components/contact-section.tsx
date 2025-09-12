@@ -76,7 +76,7 @@ ${data.message}
       const encodedMessage = encodeURIComponent(message)
 
       // Crear el enlace de WhatsApp
-      const whatsappLink = `https://wa.me/5493516669950?text=${encodedMessage}`
+      const whatsappLink = `https://wa.me/5493516669950?text=${encodedMessage}` // Actualizado número de WhatsApp al nuevo 3516669950
 
       // Abrir WhatsApp en una nueva pestaña
       window.open(whatsappLink, "_blank")
@@ -403,10 +403,10 @@ ${data.message}
                   <div>
                     <p className="font-adrianna text-xs sm:text-sm text-gray-400">Teléfono</p>
                     <a
-                      href="tel:+5493516669950"
+                      href="tel:+5493516669950" // Actualizado enlace de teléfono al nuevo número
                       className="font-adrianna text-base sm:text-lg text-white hover:text-orange-300 transition-colors"
                     >
-                      (0351) 156669950
+                      (0351) 6669950 // Actualizado número mostrado al nuevo
                     </a>
                   </div>
                 </div>
@@ -458,12 +458,12 @@ ${data.message}
                   <div>
                     <p className="font-adrianna text-sm text-gray-400">WhatsApp</p>
                     <a
-                      href="https://wa.me/5493516669950"
+                      href="https://wa.me/5493516669950" // Actualizado enlace de WhatsApp al nuevo número
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-adrianna text-lg text-white hover:text-orange-300 transition-colors"
                     >
-                      351 666 9950
+                      351 666 9950 {/* Actualizado número de WhatsApp mostrado al nuevo formato */}
                     </a>
                   </div>
                 </div>

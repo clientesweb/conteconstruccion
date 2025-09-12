@@ -28,6 +28,10 @@ export default function CTAButton() {
     setIsHidden(true)
   }
 
+  const handleCall = () => {
+    window.open("tel:+5493516669950", "_self")
+  }
+
   if (isHidden) return null
 
   return (
@@ -44,7 +48,10 @@ export default function CTAButton() {
       >
         <i className="fa-solid fa-xmark text-xs"></i>
       </button>
-      <Button className="font-akony flex items-center gap-2 rounded-full bg-orange-500 px-6 py-6 text-sm font-bold uppercase tracking-wide text-white shadow-lg transition-all duration-300 hover:bg-orange-600 hover:shadow-xl">
+      <Button
+        onClick={handleCall}
+        className="font-akony flex items-center gap-2 rounded-full bg-orange-500 px-6 py-6 text-sm font-bold uppercase tracking-wide text-white shadow-lg transition-all duration-300 hover:bg-orange-600 hover:shadow-xl"
+      >
         <i className="fa-solid fa-phone-volume text-base"></i>
         Pedir Presupuesto
       </Button>
