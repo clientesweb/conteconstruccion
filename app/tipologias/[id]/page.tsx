@@ -271,9 +271,21 @@ export default function TipologiaDetailPage({ params }: { params: { id: string }
                 <div>
                   <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 border border-orange-200">
                     <div className="text-center">
-                      <div className="font-akony text-5xl md:text-6xl font-bold text-orange-600 mb-4">
-                        {tipologia.precio}
-                      </div>
+                      {tipologia.id === "tipologia-3" ? (
+                        <div>
+                          <div className="mb-2">
+                            <span className="font-akony text-2xl font-bold text-red-500 bg-red-100 px-4 py-2 rounded-full">
+                              ¡OFERTA ESPECIAL!
+                            </span>
+                          </div>
+                          <div className="font-adrianna text-2xl text-gray-500 line-through mb-2">$15.840.000</div>
+                          <div className="font-akony text-5xl md:text-6xl font-bold text-red-500 mb-4">$15.048.000</div>
+                        </div>
+                      ) : (
+                        <div className="font-akony text-5xl md:text-6xl font-bold text-orange-600 mb-4">
+                          {tipologia.precio}
+                        </div>
+                      )}
                       <p className="font-adrianna text-lg text-gray-600 mb-6">Incluye instalación completa</p>
                       <div className="space-y-3 text-left mb-6">
                         {/* Sección eliminada según solicitud del cliente */}
