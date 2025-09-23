@@ -205,7 +205,9 @@ export const tipologiasData = [
     dormitorios: 2,
     banos: 1,
     precio: "$15.840.000",
-    precioOferta: "OFERTA DESTACADA $15.048.000",
+    precioOferta: "OFERTA ESPECIAL $15.048.000",
+    precioOriginal: "$15.840.000", // Added original price for crossed out display
+    precioEspecial: "$15.048.000", // Added special price
     plazoEntrega: "30 días",
     amenities: [
       "Cochera 16m²",
