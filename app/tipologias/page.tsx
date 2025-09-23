@@ -187,12 +187,24 @@ export default function TipologiasPage() {
                     <div className="mb-1 flex items-start justify-between gap-2">
                       <h3 className="font-akony text-xl font-bold text-gray-900">{tipologia.title}</h3>
                       <div className="text-right flex-shrink-0">
-                        <div className="font-adrianna text-xs font-bold text-red-500 uppercase tracking-wide">
-                          {tipologia.precioOferta}
-                        </div>
-                        <div className="font-adrianna text-xl sm:text-2xl font-bold text-orange-500">
-                          {tipologia.precio}
-                        </div>
+                        {tipologia.id === "tipologia-3" ? (
+                          <div>
+                            <div className="font-adrianna text-sm font-bold text-red-500 uppercase tracking-wide mb-1">
+                              ¡OFERTA ESPECIAL!
+                            </div>
+                            <div className="font-adrianna text-sm text-gray-500 line-through">{tipologia.precio}</div>
+                            <div className="font-adrianna text-xl sm:text-2xl font-bold text-red-500">$15.048.000</div>
+                          </div>
+                        ) : (
+                          <div>
+                            <div className="font-adrianna text-xs font-bold text-red-500 uppercase tracking-wide">
+                              {tipologia.precioOferta}
+                            </div>
+                            <div className="font-adrianna text-xl sm:text-2xl font-bold text-orange-500">
+                              {tipologia.precio}
+                            </div>
+                          </div>
+                        )}
                       </div>
                     </div>
                     <p className="font-adrianna mb-4 text-gray-600">{tipologia.fullDescription}</p>
