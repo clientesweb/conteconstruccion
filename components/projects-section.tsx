@@ -40,7 +40,9 @@ export default function ProjectsSection() {
       dormitorios: 2,
       banos: 1,
       precio: "$15.840.000",
-      precioOferta: "OFERTA DESTACADA $15.048.000",
+      precioOferta: "OFERTA ESPECIAL $15.048.000",
+      precioOriginal: "$15.840.000", // Added original price for crossed out display
+      precioEspecial: "$15.048.000", // Added special price
       amenities: ["Galería 16m²", "Estar amplio", "Cocina independiente", "Comedor espacioso"],
     },
     {
@@ -102,7 +104,7 @@ export default function ProjectsSection() {
                   <div className="relative">
                     <div className="animate-pulse rounded-full bg-red-500 px-2 sm:px-3 py-1 shadow-lg">
                       <span className="font-adrianna text-xs font-bold text-white">
-                        {tipologia.id === "tipologia-3" ? "¡OFERTA DESTACADA!" : "¡OFERTA DEL MES!"}
+                        {tipologia.id === "tipologia-3" ? "¡OFERTA ESPECIAL!" : "¡OFERTA DEL MES!"}
                       </span>
                     </div>
                   </div>
@@ -112,12 +114,28 @@ export default function ProjectsSection() {
                 <div className="mb-1 flex items-start justify-between gap-2">
                   <h3 className="font-akony text-lg sm:text-xl font-bold text-gray-900 flex-1">{tipologia.title}</h3>
                   <div className="text-right flex-shrink-0">
-                    <div className="font-adrianna text-xs font-bold text-red-500 uppercase tracking-wide">
-                      {tipologia.precioOferta}
-                    </div>
-                    <div className="font-adrianna text-base sm:text-lg font-bold text-orange-500">
-                      {tipologia.precio}
-                    </div>
+                    {tipologia.id === "tipologia-3" ? (
+                      <div>
+                        <div className="font-adrianna text-sm font-bold text-red-500 uppercase tracking-wide mb-1">
+                          ¡OFERTA ESPECIAL!
+                        </div>
+                        <div className="font-adrianna text-xs text-gray-500 line-through">
+                          {tipologia.precioOriginal || tipologia.precio}
+                        </div>
+                        <div className="font-adrianna text-lg sm:text-xl font-bold text-red-500">
+                          {tipologia.precioEspecial || "$15.048.000"}
+                        </div>
+                      </div>
+                    ) : (
+                      <div>
+                        <div className="font-adrianna text-xs font-bold text-red-500 uppercase tracking-wide">
+                          {tipologia.precioOferta}
+                        </div>
+                        <div className="font-adrianna text-base sm:text-lg font-bold text-orange-500">
+                          {tipologia.precio}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
                 <p className="font-adrianna mb-3 sm:mb-4 text-sm sm:text-base text-gray-600 line-clamp-2">
