@@ -13,7 +13,7 @@ export default function ProjectsSection() {
       metros: 30,
       dormitorios: 1,
       banos: 1,
-      precio: "$8.800.000",
+      precio: "$9.240.000",
       precioOferta: "¡Oferta del mes!",
       amenities: ["Cocina comedor", "Baño completo", "Ante baño", "Aberturas línea Modena"],
     },
@@ -26,7 +26,7 @@ export default function ProjectsSection() {
       metros: 60,
       dormitorios: 2,
       banos: 1,
-      precio: "$13.500.000",
+      precio: "$14.175.000",
       precioOferta: "¡Oferta del mes!",
       amenities: ["Galería 20m²", "Cocina independiente", "Comedor amplio", "Aberturas línea Modena"],
     },
@@ -39,8 +39,8 @@ export default function ProjectsSection() {
       metros: 64,
       dormitorios: 2,
       banos: 1,
-      precio: "$14.400.000",
-      precioOferta: "¡Oferta del mes!",
+      precio: "$15.840.000",
+      precioOferta: "OFERTA DESTACADA $15.048.000",
       amenities: ["Galería 16m²", "Estar amplio", "Cocina independiente", "Comedor espacioso"],
     },
     {
@@ -52,7 +52,7 @@ export default function ProjectsSection() {
       metros: 71,
       dormitorios: 2,
       banos: 1,
-      precio: "$15.970.000",
+      precio: "$16.768.500",
       precioOferta: "¡Oferta del mes!",
       amenities: ["Galería 20m²", "Lavadero independiente", "Ante baño", "Estar independiente"],
     },
@@ -101,7 +101,9 @@ export default function ProjectsSection() {
                 <div className="absolute top-3 sm:top-4 right-3 sm:right-4 z-10">
                   <div className="relative">
                     <div className="animate-pulse rounded-full bg-red-500 px-2 sm:px-3 py-1 shadow-lg">
-                      <span className="font-adrianna text-xs font-bold text-white">¡OFERTA DEL MES!</span>
+                      <span className="font-adrianna text-xs font-bold text-white">
+                        {tipologia.id === "tipologia-3" ? "¡OFERTA DESTACADA!" : "¡OFERTA DEL MES!"}
+                      </span>
                     </div>
                   </div>
                 </div>
