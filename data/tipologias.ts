@@ -18,7 +18,7 @@ export const tipologiasData = [
     metros: 30,
     dormitorios: 1,
     banos: 1,
-    precio: "$8.800.000",
+    precio: "$9.240.000",
     precioOferta: "¡Oferta del mes!",
     plazoEntrega: "25 días",
     amenities: [
@@ -111,7 +111,7 @@ export const tipologiasData = [
     metros: 60,
     dormitorios: 2,
     banos: 1,
-    precio: "$13.500.000",
+    precio: "$14.175.000",
     precioOferta: "¡Oferta del mes!",
     plazoEntrega: "30 días",
     amenities: [
@@ -204,8 +204,8 @@ export const tipologiasData = [
     metros: 64,
     dormitorios: 2,
     banos: 1,
-    precio: "$14.400.000",
-    precioOferta: "¡Oferta del mes!",
+    precio: "$15.840.000",
+    precioOferta: "OFERTA DESTACADA $15.048.000",
     plazoEntrega: "30 días",
     amenities: [
       "Cochera 16m²",
@@ -299,7 +299,7 @@ export const tipologiasData = [
     metros: 71,
     dormitorios: 2,
     banos: 1,
-    precio: "$15.970.000",
+    precio: "$16.768.500",
     precioOferta: "¡Oferta del mes!",
     plazoEntrega: "35 días",
     amenities: [
@@ -397,7 +397,7 @@ export const tipologiasData = [
     metros: 85,
     dormitorios: 3,
     banos: 1,
-    precio: "$18.990.000",
+    precio: "$19.939.500",
     precioOferta: "¡Oferta del mes!",
     plazoEntrega: "40 días",
     amenities: [
@@ -493,7 +493,7 @@ export const tipologiasData = [
     metros: 100,
     dormitorios: 3,
     banos: 1,
-    precio: "$22.500.000",
+    precio: "$23.625.000",
     precioOferta: "¡Oferta del mes!",
     plazoEntrega: "45 días",
     amenities: [
@@ -591,7 +591,7 @@ export const tipologiasData = [
     metros: 110,
     dormitorios: 3,
     banos: 2,
-    precio: "$24.750.000",
+    precio: "$25.987.500",
     precioOferta: "¡Oferta del mes!",
     plazoEntrega: "50 días",
     amenities: [
