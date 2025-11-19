@@ -5,22 +5,10 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import {
-  BedDouble,
-  Bath,
-  Grid2X2,
-  Check,
-  Share2,
-  Heart,
-  ArrowRight,
-  CheckCircle2,
-  FileText,
-  Home,
-  Info,
-} from "lucide-react"
+import { BedDouble, Bath, Grid2X2, Check, Share2, Heart, ArrowRight, CheckCircle2, FileText, Home, Info } from 'lucide-react'
 import Image from "next/image"
 import Link from "next/link"
-import { useRouter } from "next/navigation"
+import { useRouter } from 'next/navigation'
 import { tipologiasData } from "@/data/tipologias"
 import CTAButton from "@/components/cta-button"
 
@@ -351,46 +339,42 @@ export default function TipologiaDetailPage({ params }: { params: { id: string }
                       </div>
                     )}
 
-                    {(tipologia.id === "tipologia-1" ||
-                      tipologia.id === "tipologia-2" ||
-                      tipologia.id === "tipologia-3" ||
-                      tipologia.id === "tipologia-4") &&
-                      tipologia.bonificaciones && (
-                        <div>
-                          <h3 className="font-akony mb-6 text-2xl font-bold text-orange-500">
-                            De regalo con tu vivienda, 100% bonificado:
-                          </h3>
-                          <div className="bg-orange-50 p-6 rounded-lg border border-orange-200">
-                            <ul className="font-adrianna space-y-3 mb-6">
-                              {tipologia.bonificaciones.map((item, index) => (
-                                <li key={index} className="flex items-start gap-3">
-                                  <Check className="mt-1 h-5 w-5 flex-shrink-0 text-orange-500" aria-hidden="true" />
-                                  <span className="text-gray-700">{item}</span>
-                                </li>
-                              ))}
-                            </ul>
+                    {tipologia.bonificaciones && (
+                      <div>
+                        <h3 className="font-akony mb-6 text-2xl font-bold text-orange-500">
+                          De regalo con tu vivienda, 100% bonificado:
+                        </h3>
+                        <div className="bg-orange-50 p-6 rounded-lg border border-orange-200">
+                          <ul className="font-adrianna space-y-3 mb-6">
+                            {tipologia.bonificaciones.map((item, index) => (
+                              <li key={index} className="flex items-start gap-3">
+                                <Check className="mt-1 h-5 w-5 flex-shrink-0 text-orange-500" aria-hidden="true" />
+                                <span className="text-gray-700">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
 
-                            <div className="p-4 bg-white rounded-lg border border-orange-200">
-                              <p className="font-adrianna text-gray-700">
-                                Al valor de la vivienda tenés que sumar el costo del flete, que varía dependiendo de la
-                                ciudad o localidad en la que se instale tu casa.{" "}
-                                <button
-                                  onClick={() => {
-                                    const message = `Hola, estoy interesado en la ${tipologia.title} y quisiera consultar sobre el costo del flete para mi ubicación.`
-                                    window.open(
-                                      `https://wa.me/5493516669950?text=${encodeURIComponent(message)}`,
-                                      "_blank",
-                                    )
-                                  }}
-                                  className="text-orange-500 font-bold hover:underline"
-                                >
-                                  ¡Consultanos!
-                                </button>
-                              </p>
-                            </div>
+                          <div className="p-4 bg-white rounded-lg border border-orange-200">
+                            <p className="font-adrianna text-gray-700">
+                              Al valor de la vivienda tenés que sumar el costo del flete, que varía dependiendo de la
+                              ciudad o localidad en la que se instale tu casa.{" "}
+                              <button
+                                onClick={() => {
+                                  const message = `Hola, estoy interesado en la ${tipologia.title} y quisiera consultar sobre el costo del flete para mi ubicación.`
+                                  window.open(
+                                    `https://wa.me/5493516669950?text=${encodeURIComponent(message)}`,
+                                    "_blank",
+                                  )
+                                }}
+                                className="text-orange-500 font-bold hover:underline"
+                              >
+                                ¡Consultanos!
+                              </button>
+                            </p>
                           </div>
                         </div>
-                      )}
+                      </div>
+                    )}
                   </div>
                 </CardContent>
               </Card>
