@@ -18,7 +18,7 @@ export const tipologiasData = [
     metros: 30,
     dormitorios: 1,
     banos: 1,
-    precio: "$9.240.000",
+    precio: "$10.164.000",
     precioOferta: "¡Oferta del mes!",
     plazoEntrega: "25 días",
     amenities: [
@@ -111,7 +111,7 @@ export const tipologiasData = [
     metros: 60,
     dormitorios: 2,
     banos: 1,
-    precio: "$14.175.000",
+    precio: "$15.592.500",
     precioOferta: "¡Oferta del mes!",
     plazoEntrega: "30 días",
     amenities: [
@@ -204,10 +204,10 @@ export const tipologiasData = [
     metros: 64,
     dormitorios: 2,
     banos: 1,
-    precio: "$15.840.000",
-    precioOferta: "OFERTA ESPECIAL $15.048.000",
-    precioOriginal: "$15.840.000", // Added original price for crossed out display
-    precioEspecial: "$15.048.000", // Added special price
+    precio: "$17.424.000",
+    precioOferta: "OFERTA ESPECIAL $16.552.800",
+    precioOriginal: "$17.424.000", // Added original price for crossed out display
+    precioEspecial: "$16.552.800",
     plazoEntrega: "30 días",
     amenities: [
       "Cochera 16m²",
@@ -301,7 +301,7 @@ export const tipologiasData = [
     metros: 71,
     dormitorios: 2,
     banos: 1,
-    precio: "$16.768.500",
+    precio: "$18.445.350",
     precioOferta: "¡Oferta del mes!",
     plazoEntrega: "35 días",
     amenities: [
@@ -399,7 +399,7 @@ export const tipologiasData = [
     metros: 85,
     dormitorios: 3,
     banos: 1,
-    precio: "$19.939.500",
+    precio: "$21.933.450",
     precioOferta: "¡Oferta del mes!",
     plazoEntrega: "40 días",
     amenities: [
@@ -495,7 +495,7 @@ export const tipologiasData = [
     metros: 100,
     dormitorios: 3,
     banos: 1,
-    precio: "$23.625.000",
+    precio: "$25.987.500",
     precioOferta: "¡Oferta del mes!",
     plazoEntrega: "45 días",
     amenities: [
@@ -593,7 +593,7 @@ export const tipologiasData = [
     metros: 110,
     dormitorios: 3,
     banos: 2,
-    precio: "$25.987.500",
+    precio: "$28.586.250",
     precioOferta: "¡Oferta del mes!",
     plazoEntrega: "50 días",
     amenities: [
