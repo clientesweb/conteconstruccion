@@ -266,8 +266,8 @@ export default function TipologiaDetailPage({ params }: { params: { id: string }
                               ¡OFERTA ESPECIAL!
                             </span>
                           </div>
-                          <div className="font-adrianna text-2xl text-gray-500 line-through mb-2">$15.840.000</div>
-                          <div className="font-akony text-5xl md:text-6xl font-bold text-red-500 mb-4">$15.048.000</div>
+                          <div className="font-adrianna text-2xl text-gray-500 line-through mb-2">$18.295.200</div>
+                          <div className="font-akony text-5xl md:text-6xl font-bold text-red-500 mb-4">$17.380.440</div>
                         </div>
                       ) : (
                         <div className="font-akony text-5xl md:text-6xl font-bold text-orange-600 mb-4">
