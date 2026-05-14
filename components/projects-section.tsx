@@ -13,7 +13,7 @@ export default function ProjectsSection() {
       metros: 30,
       dormitorios: 1,
       banos: 1,
-      precio: "$10.164.000",
+      precio: "$10.672.200", // +5% de $10.164.000
       precioOferta: "¡Oferta del mes!",
       amenities: ["Cocina comedor", "Baño completo", "Ante baño", "Aberturas línea Modena"],
     },
@@ -26,7 +26,7 @@ export default function ProjectsSection() {
       metros: 60,
       dormitorios: 2,
       banos: 1,
-      precio: "$15.592.500",
+      precio: "$16.372.125", // +5% de $15.592.500
       precioOferta: "¡Oferta del mes!",
       amenities: ["Galería 20m²", "Cocina independiente", "Comedor amplio", "Aberturas línea Modena"],
     },
@@ -39,10 +39,10 @@ export default function ProjectsSection() {
       metros: 64,
       dormitorios: 2,
       banos: 1,
-      precio: "$17.424.000",
-      precioOferta: "OFERTA ESPECIAL $16.552.800",
-      precioOriginal: "$17.424.000", // Added original price for crossed out display
-      precioEspecial: "$16.552.800", // Added special price
+      precio: "$18.295.200", // +5% de $17.424.000
+      precioOferta: "OFERTA ESPECIAL $17.380.440",
+      precioOriginal: "$18.295.200",
+      precioEspecial: "$17.380.440", // +5% de $16.552.800
       amenities: ["Galería 16m²", "Estar amplio", "Cocina independiente", "Comedor espacioso"],
     },
     {
@@ -54,7 +54,7 @@ export default function ProjectsSection() {
       metros: 71,
       dormitorios: 2,
       banos: 1,
-      precio: "$18.445.350",
+      precio: "$19.367.618", // +5% de $18.445.350
       precioOferta: "¡Oferta del mes!",
       amenities: ["Galería 20m²", "Lavadero independiente", "Ante baño", "Estar independiente"],
     },
@@ -123,7 +123,7 @@ export default function ProjectsSection() {
                           {tipologia.precioOriginal || tipologia.precio}
                         </div>
                         <div className="font-adrianna text-lg sm:text-xl font-bold text-red-500">
-                          {tipologia.precioEspecial || "$16.552.800"}
+                          {tipologia.precioEspecial}
                         </div>
                       </div>
                     ) : (
