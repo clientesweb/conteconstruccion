@@ -193,7 +193,7 @@ export default function TipologiasPage() {
                               ¡OFERTA ESPECIAL!
                             </div>
                             <div className="font-adrianna text-sm text-gray-500 line-through">{tipologia.precio}</div>
-                            <div className="font-adrianna text-xl sm:text-2xl font-bold text-red-500">$15.048.000</div>
+                            <div className="font-adrianna text-xl sm:text-2xl font-bold text-red-500">$17.380.440</div>
                           </div>
                         ) : (
                           <div>
